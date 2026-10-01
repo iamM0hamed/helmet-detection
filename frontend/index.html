@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Helmet Detection</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <header class="header">
+            <h1>Helmet Detection</h1>
+            <p>Upload an image to detect helmets.</p>
+        </header>
+
+        <section class="upload-section">
+
+            <label for="image-input" class="upload-button">
+                Choose Image
+            </label>
+
+            <input
+                id="image-input"
+                type="file"
+                accept="image/*"
+                hidden
+            >
+
+            <p id="file-name" class="file-name">
+                No image selected
+            </p>
+
+        </section>
+
+        <section id="preview-section" class="preview-section hidden">
+
+            <h2>Preview</h2>
+
+            <div class="image-container">
+                    <canvas id="detection-canvas"></canvas>
+            </div>
+
+            <button id="detect-button" type="button">
+                Detect
+            </button>
+
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+
+            <h2>Results</h2>
+
+            <p id="results-count"></p>
+
+            <div id="results-container"></div>
+
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
